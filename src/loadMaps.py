@@ -14,7 +14,7 @@ def configLogging():
     logging.basicConfig(
         # filename = "a.log",
         # filemode="w",
-        level = logging.DEBUG)
+        level = logging.INFO)
 
 
 def resetMap():
@@ -42,6 +42,7 @@ def updateMap(building='COM1', floor='2'):
 ##############
 
 configLogging()
+logging.info('== Map script updater v%s ==' % VERSION)
 resetMap()
 
 # updateMap(building='COM1', floor='B1')
