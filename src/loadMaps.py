@@ -1,7 +1,7 @@
 ## This script caches maps in the database. ##
 
 ## Version number
-VERSION = 0.0.1
+VERSION = '0.0.1'
 
 import requests
 import logging
@@ -36,8 +36,16 @@ def updateMap(building='COM1', floor='2'):
     except requests.exceptions.RequestException as e:
         logging.error('Oops!  Failed to update map building=%s floor=%s.  Is server connected?'% (building, floor) )
 
+
+##############
 ## Main App ##
+##############
+
 configLogging()
 resetMap()
-updateMap()
+
+# updateMap(building='COM1', floor='B1')
+updateMap(building='COM1', floor='1')
+updateMap(building='COM1', floor='2')
+updateMap(building='COM1', floor='3')
 
