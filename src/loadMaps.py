@@ -28,7 +28,7 @@ def resetMap():
         logging.error('Oops!  Failed to delete map.  Is server connected?')
 
 
-def updateMap(building='COM1', floor='2'):
+def updateMap(building='<COM></COM>1', floor='2'):
     """Updates the map on server. 
     """
     try:
@@ -38,11 +38,11 @@ def updateMap(building='COM1', floor='2'):
         logging.error('Oops!  Failed to update map building=%s floor=%s.  Is server connected?'% (building, floor) )
 
 
-def createEdge(source, target, suid):
+def createEdge(source, target, suid, weight=1):
     """Creates an edge.  Useful for linking floors 
     """
     try:
-        requests.post(HOST_ADDR + '/edge/?source=%s&target=%s&SUID=%s' % (source, target, suid) )
+        requests.post(HOST_ADDR + '/edge/?source=%s&target=%s&SUID=%s&weight=1' % (source, target, suid) )
         logging.info('Created edge source=%s target=%s SUID=%s' % (source, target, suid) )
     except requests.exceptions.RequestException as e:
         logging.error('Oops!  Failed to create edge source=%s target=%s SUID=%s.  Is server connected?'% (source, target, suid) )
