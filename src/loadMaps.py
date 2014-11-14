@@ -1,7 +1,7 @@
 ## This script caches maps in the database. ##
 
 ## Version number
-VERSION = '0.0.1'
+VERSION = '0.0.2'
 
 import requests
 import logging
@@ -73,4 +73,4 @@ createEdge(1231, 221, 'edge0')
 # COM1 floor links
 
 # COM2 floor links
-createEdge(2216, 2312, 'edge1')
+createEdge(2216, 2311, 'edge1')
