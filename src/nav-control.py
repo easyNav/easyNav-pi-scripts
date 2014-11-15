@@ -19,6 +19,7 @@ _dispatcherClient.start()
 ### Reset
 if (command == 'reset'):
     _dispatcherClient.send(9001, 'reset', {})
+    _dispatcherClient.send(9002, 'reset', {})
 
 ### Pause
 elif (command == 'pause'):
